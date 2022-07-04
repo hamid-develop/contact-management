@@ -1,11 +1,18 @@
-import "./App.css";
+import {useState} from 'react'
+import Navbar from "./components/Navbar";
+import Main from "./components/Main";
 
 function App() {
-  return (
-    <div className="w-full h-80 bg-red-400">
-   <h1 className=" text-center">Hamidreza</h1>
-    </div>
-  );
+  const user = [
+    { name: "حمیدرضا", phone: "09194106814", email: "a@b.com" },
+    { name: "حمیدرضا", phone: "09194106814", email: "a@b.com" },
+    { name: "حمیدرضا", phone: "09194106814", email: "a@b.com" },
+  ];
+  const [loading, setLoading] = useState(false);
+  return <div>
+    <Navbar />
+    <Main loading={loading} user={user} />
+  </div>;
 }
 
 export default App;

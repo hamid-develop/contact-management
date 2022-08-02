@@ -1,18 +1,14 @@
-import {useState} from 'react'
-import Navbar from "./components/Navbar";
-import Main from "./components/Main";
+import { Link, Outlet } from "react-router-dom";
 
 function App() {
-  const user = [
-    { name: "حمیدرضا", phone: "09194106814", email: "a@b.com" },
-    { name: "حمیدرضا", phone: "09194106814", email: "a@b.com" },
-    { name: "حمیدرضا", phone: "09194106814", email: "a@b.com" },
-  ];
-  const [loading, setLoading] = useState(false);
-  return <div>
-    <Navbar />
-    <Main loading={loading} user={user} />
-  </div>;
+  return (
+    <div className="App">
+      <nav className="flex items-center justify-center border-b h-20 p-5">
+        <Link to="/about">About</Link>{" "}<Link to="/persons">Persons</Link>
+      </nav>
+        <Outlet />
+    </div>
+  );
 }
 
 export default App;

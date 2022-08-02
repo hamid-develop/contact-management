@@ -2,7 +2,7 @@ const ContactSearch = () => {
   return (
     <div className="flex relative ">
       <input
-        class="shadow text-md appearance-none focus:border-blue-400 transition ease-in-out delay-400 border-2 rounded w-full p-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        className="shadow text-md appearance-none focus:border-blue-400 transition ease-in-out delay-400 border-2 rounded w-full p-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
         type="text"
         placeholder="جستجوی مخاطبین"
       />
